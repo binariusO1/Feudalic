@@ -995,7 +995,7 @@ type			princess
 
 actions			moving_normal, diplomacy, bribe, marry
 wage_base		150
-starting_action_points	160
+starting_action_points	180
 
 faction			lithuania
 dictionary		2
