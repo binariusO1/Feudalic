@@ -4472,7 +4472,7 @@ Trigger 0081_F_Obvious_Bribe
     Condition ForgivenessName = FC_OBVIOUS_BRIBE
 	and not TargetFactionType papal_states
 	
-    FactionStanding target_faction 0.008
+    FactionStanding target_faction 0.024
 ;------------------------------------------
 ;Need to pay 5x more than in 0.96, even more for papal state
 ; fired for every 1000 gold given as gift
@@ -4485,7 +4485,7 @@ Trigger 0081_F_Obvious_Bribe
 	and DiplomaticStanceFromFaction papal_states < AtWar
 	and FactionIsLocal
 	
-	FactionStanding target_faction 0.004
+	FactionStanding target_faction 0.012
 ;------------------------------------------
 ;Trigger 0082_F_Update_Attitude
 ;    WhenToTest UpdateAttitude
