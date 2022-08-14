@@ -62826,7 +62826,7 @@ Trigger Merchant_Old_Age
 	WhenToTest CharacterTurnEnd
 
 	Condition AgentType = merchant
-		and CharacterAge > 45
+		and CharacterAge > 50
 		and not CharFactionType slave
 
 	Affects OldMerchant 1 Chance 100
@@ -62836,7 +62836,7 @@ Trigger Merchant_Aging_From_Illness
 	WhenToTest CharacterTurnStart
 
 	Condition AgentType = merchant
-		and CharacterAge > 40
+		and CharacterAge > 45
 		and Trait AgentHealth > 0
 
 	Affects OldMerchant 1 Chance 50
@@ -62846,7 +62846,7 @@ Trigger Merchant_Aging_Acquition_Attempt
 	WhenToTest SufferAcquisitionAttempt
 
 	Condition AgentType = merchant
-		and CharacterAge > 40
+		and CharacterAge > 45
 
 	Affects OldMerchant 1 Chance 50
  
