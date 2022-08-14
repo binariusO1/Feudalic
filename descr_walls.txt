@@ -16,38 +16,13 @@ gates
 {
 	gate  short_wooden
 	{
-		full_health 100
+		full_health 300
 		height 10.0		; TODO -
 		pursuit_lockout_radius	80.0
 		blocked_lockout_radius	70.0
 	}
 
 	gate  medium_wooden
-	{
-		full_health 150
-		height 10.0		; TODO -
-		pursuit_lockout_radius	80.0
-		blocked_lockout_radius	70.0
-	}
-
-
-	gate  huge_wooden
-	{
-		full_health 200
-		height 10.0		; TODO -
-		pursuit_lockout_radius	80.0
-		blocked_lockout_radius	70.0
-	}
-
-	gate  medium_reinforced
-	{
-		full_health 250
-		height 10.0		; TODO -
-		pursuit_lockout_radius	80.0
-		blocked_lockout_radius	70.0
-	}
-
-	gate  huge_reinforced
 	{
 		full_health 300
 		height 10.0		; TODO -
@@ -56,9 +31,34 @@ gates
 	}
 
 
+	gate  huge_wooden
+	{
+		full_health 400
+		height 10.0		; TODO -
+		pursuit_lockout_radius	80.0
+		blocked_lockout_radius	70.0
+	}
+
+	gate  medium_reinforced
+	{
+		full_health 500
+		height 10.0		; TODO -
+		pursuit_lockout_radius	80.0
+		blocked_lockout_radius	70.0
+	}
+
+	gate  huge_reinforced
+	{
+		full_health 600
+		height 10.0		; TODO -
+		pursuit_lockout_radius	80.0
+		blocked_lockout_radius	70.0
+	}
+
+
 	gate  medium_iron
 	{
-		full_health 350
+		full_health 700
 		height 10.0		; TODO -
 		pursuit_lockout_radius	80.0
 		blocked_lockout_radius	70.0
@@ -66,7 +66,7 @@ gates
 
 	gate  huge_iron
 	{
-		full_health 400
+		full_health 800
 		height 10.0		; TODO -
 		pursuit_lockout_radius	80.0
 		blocked_lockout_radius	70.0
