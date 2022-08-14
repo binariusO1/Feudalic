@@ -9,8 +9,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_venice.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 121, green 18, blue 18
-secondary_colour				red 65, green 0, blue 0
+;primary_colour					red 121, green 18, blue 18
+;secondary_colour				red 65, green 0, blue 0
+primary_colour					red 121, green 3, blue 3
+secondary_colour				red 255, green 215, blue 0
 loading_logo					loading_screen/symbols/symbol128_venice.tga
 standard_index					0
 logo_index					FACTION_LOGO_VENICE
@@ -29,8 +31,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_sicily.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
+;primary_colour					red 70, green 70, blue 70
+;secondary_colour				red 27, green 27, blue 27
 primary_colour					red 70, green 70, blue 70
-secondary_colour				red 27, green 27, blue 27
+secondary_colour				red 250, green 250, blue 255
 loading_logo					loading_screen/symbols/symbol128_sicily.tga
 standard_index					1
 logo_index					FACTION_LOGO_SICILY
@@ -69,8 +73,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_denmark.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 149, green 133, blue 25
-secondary_colour				red 95, green 82, blue 0
+;primary_colour					red 149, green 133, blue 25
+;secondary_colour				red 95, green 82, blue 0
+primary_colour					red 239, green 185, blue 24
+secondary_colour				red 0, green 69, blue 142
 loading_logo					loading_screen/symbols/symbol128_denmark.tga
 standard_index					4
 logo_index					FACTION_LOGO_DENMARK
@@ -89,8 +95,10 @@ culture						middle_eastern
 religion					islam
 symbol						models_strat/symbol_egypt.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 22, green 149, blue 63
-secondary_colour				red 0, green 122, blue 40
+;primary_colour					red 22, green 149, blue 63
+;secondary_colour				red 0, green 122, blue 40
+primary_colour					red 221, green 176, blue 69
+secondary_colour				red 5, green 5, blue 5
 loading_logo					loading_screen/symbols/symbol128_egypt.tga
 standard_index					5
 logo_index					FACTION_LOGO_EGYPT
@@ -109,8 +117,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_scotland.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 65, green 57, blue 144
-secondary_colour				red 0, green 16, blue 94
+;primary_colour					red 65, green 57, blue 144
+;secondary_colour				red 0, green 16, blue 94
+primary_colour					red 0, green 16, blue 94
+secondary_colour				red 239, green 239, blue 239
 loading_logo					loading_screen/symbols/symbol128_scotland.tga
 standard_index					6
 logo_index					FACTION_LOGO_SCOTLAND
@@ -129,8 +139,10 @@ culture						eastern_european
 religion					pagan
 symbol						models_strat/symbol_aztecs.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 115, green 52, blue 23
-secondary_colour				red 77, green 29, blue 8
+;primary_colour					red 115, green 52, blue 23
+;secondary_colour				red 77, green 29, blue 8
+primary_colour					red 116, green 45, blue 13
+secondary_colour				red 18, green 189, blue 250
 loading_logo					loading_screen/symbols/symbol128_aztecs.tga
 standard_index					7
 logo_index					FACTION_LOGO_CUMANS
@@ -169,8 +181,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_france.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 23, green 87, blue 153
-secondary_colour				red 6, green 59, blue 115
+;primary_colour					red 23, green 87, blue 153
+;secondary_colour				red 6, green 59, blue 115
+primary_colour					red 0, green 87, blue 177
+secondary_colour				red 255, green 215, blue 0
 loading_logo					loading_screen/symbols/symbol128_france.tga
 standard_index					10
 logo_index					FACTION_LOGO_FRANCE
@@ -189,8 +203,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_holy_roman_empire.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 230, green 191, blue 57
-secondary_colour				red 173, green 140, blue 25
+;primary_colour					red 230, green 191, blue 57
+;secondary_colour				red 173, green 140, blue 25
+primary_colour					red 0, green 0, blue 0
+secondary_colour				red 255, green 210, blue 0
 loading_logo					loading_screen/symbols/symbol128_hre.tga
 standard_index					11
 logo_index					FACTION_LOGO_HRE
@@ -209,8 +225,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_england.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 230, green 34, blue 34
-secondary_colour				red 179, green 9, blue 9
+;primary_colour					red 230, green 34, blue 34
+;secondary_colour				red 179, green 9, blue 9
+primary_colour					red 215, green 0, blue 0
+secondary_colour				red 255, green 210, blue 0
 loading_logo					loading_screen/symbols/symbol128_england.tga
 standard_index					12
 logo_index					FACTION_LOGO_ENGLAND
@@ -229,8 +247,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_portugal.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 175, green 195, blue 222
-secondary_colour				red 122, green 142, blue 167
+;primary_colour					red 175, green 195, blue 222
+;secondary_colour				red 122, green 142, blue 167
+primary_colour					red 255, green 255, blue 255
+secondary_colour				red 0, green 69, blue 185
 loading_logo					loading_screen/symbols/symbol128_portugal.tga
 standard_index					13
 logo_index					FACTION_LOGO_PORTUGAL
@@ -249,8 +269,8 @@ culture						eastern_european
 religion					catholic
 symbol						models_strat/symbol_poland.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 230, green 115, blue 123
-secondary_colour				red 179, green 71, blue 79
+primary_colour					red 220, green 20, blue 35
+secondary_colour				red 233, green 232, blue 231
 loading_logo					loading_screen/symbols/symbol128_poland.tga
 standard_index					14
 logo_index					FACTION_LOGO_POLAND
@@ -269,8 +289,10 @@ culture						greek
 religion					orthodox
 symbol						models_strat/symbol_byzantium.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 114, green 52, blue 115
-secondary_colour				red 76, green 27, blue 77
+;primary_colour					red 114, green 52, blue 115
+;secondary_colour				red 76, green 27, blue 77
+primary_colour					red 76, green 36, blue 78
+secondary_colour				red 255, green 210, blue 0
 loading_logo					loading_screen/symbols/symbol128_byzantium.tga
 standard_index					15
 logo_index					FACTION_LOGO_BYZANTIUM
@@ -289,8 +311,10 @@ culture						middle_eastern
 religion					islam
 symbol						models_strat/symbol_moors.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 230, green 107, blue 34
-secondary_colour				red 179, green 72, blue 9
+;primary_colour					red 230, green 107, blue 34
+;secondary_colour				red 179, green 72, blue 9
+primary_colour					red 236, green 88, blue 0
+secondary_colour				red 255, green 255, blue 255
 loading_logo					loading_screen/symbols/symbol128_moors.tga
 standard_index					16
 logo_index					FACTION_LOGO_MOORS
@@ -309,8 +333,10 @@ culture						eastern_european
 religion					orthodox
 symbol						models_strat/symbol_russia.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 39, green 45, blue 131
-secondary_colour				red 0, green 0, blue 80
+;primary_colour					red 39, green 45, blue 131
+;secondary_colour				red 0, green 0, blue 80
+primary_colour					red 12, green 30, blue 119
+secondary_colour				red 255, green 36, blue 0
 loading_logo					loading_screen/symbols/symbol128_russia.tga
 standard_index					17
 logo_index					FACTION_LOGO_RUSSIA
@@ -329,8 +355,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_spain.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 255, green 183, blue 38
-secondary_colour				red 188, green 117, blue 0
+;primary_colour					red 255, green 183, blue 38
+;secondary_colour				red 188, green 117, blue 0
+primary_colour					red 255, green 210, blue 0
+secondary_colour				red 215, green 0, blue 0
 loading_logo					loading_screen/symbols/symbol128_spain.tga
 standard_index					18
 logo_index					FACTION_LOGO_SPAIN
@@ -349,8 +377,10 @@ culture						eastern_european
 religion					catholic
 symbol						models_strat/symbol_hungary.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 217, green 83, blue 65
-secondary_colour				red 166, green 49, blue 33
+;primary_colour					red 217, green 83, blue 65
+;secondary_colour				red 166, green 49, blue 33
+primary_colour					red 221, green 70, blue 50
+secondary_colour				red 80, green 200, blue 120
 loading_logo					loading_screen/symbols/symbol128_hungary.tga
 standard_index					19
 logo_index					FACTION_LOGO_HUNGARY
@@ -369,8 +399,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_carthage_rebel.cas
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 139, green 191, blue 86
-secondary_colour				red 95, green 140, blue 49
+;primary_colour					red 139, green 191, blue 86
+;secondary_colour				red 95, green 140, blue 49
+primary_colour					red 212, green 175, blue 55
+secondary_colour				red 225, green 0, blue 0
 loading_logo					loading_screen/symbols/symbol128_spain.tga
 standard_index					20
 logo_index					FACTION_LOGO_ARAGON
@@ -389,8 +421,10 @@ culture						eastern_european
 religion					pagan
 symbol						models_strat/symbol_lithuania.cas
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 184, green 104, blue 78
-secondary_colour				red 128, green 55, blue 34
+;primary_colour					red 184, green 104, blue 78
+;secondary_colour				red 128, green 55, blue 34
+primary_colour					red 128, green 55, blue 34
+secondary_colour				red 255, green 77, blue 26
 loading_logo					loading_screen/symbols/symbol128_scotland.tga
 standard_index					21
 logo_index					FACTION_LOGO_LITHUANIA
@@ -409,8 +443,10 @@ culture						eastern_european
 religion					orthodox
 symbol						models_strat/symbol_novgorod.cas
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 118, green 168, blue 253
-secondary_colour				red 58, green 117, blue 196
+;primary_colour					red 118, green 168, blue 253
+;secondary_colour				red 58, green 117, blue 196
+primary_colour					red 58, green 117, blue 196
+secondary_colour				red 249, green 221, blue 22
 loading_logo					loading_screen/symbols/symbol128_russia.tga
 standard_index					22
 logo_index					FACTION_LOGO_KIEVAN_RUS
@@ -469,8 +505,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_norway.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 128, green 39, blue 29
-secondary_colour				red 73, green 0, blue 0
+;primary_colour					red 128, green 39, blue 29
+;secondary_colour				red 73, green 0, blue 0
+primary_colour					red 128, green 36, blue 26
+secondary_colour				red 0, green 16, blue 94
 loading_logo					loading_screen/symbols/symbol128_norway.tga
 standard_index					25
 logo_index					FACTION_LOGO_NORWAY
@@ -489,8 +527,10 @@ culture						northern_european
 religion					catholic
 symbol						models_strat/symbol_jerusalem.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
+;primary_colour					red 239, green 239, blue 239
+;secondary_colour				red 182, green 182, blue 182
 primary_colour					red 239, green 239, blue 239
-secondary_colour				red 182, green 182, blue 182
+secondary_colour				red 197, green 156, blue 61
 loading_logo					loading_screen/symbols/symbol128_england.tga
 standard_index					26
 logo_index					FACTION_LOGO_JERUSALEM
@@ -549,8 +589,10 @@ culture						southern_european
 religion					catholic
 symbol						models_strat/symbol_saxons.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 192, green 48, blue 120
-secondary_colour				red 140, green 21, blue 80
+;primary_colour					red 192, green 48, blue 120
+;secondary_colour				red 140, green 21, blue 80
+primary_colour					red 235, green 10, blue 10
+secondary_colour				red 215, green 210, blue 180
 loading_logo					loading_screen/symbols/symbol128_pisa.tga
 standard_index					29
 logo_index					FACTION_LOGO_PISA
@@ -570,8 +612,10 @@ religion					catholic
 special_faction_type				papal_faction
 symbol						models_strat/symbol_papacy.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
+;primary_colour					red 200, green 200, blue 155
+;secondary_colour				red 147, green 147, blue 103
 primary_colour					red 200, green 200, blue 155
-secondary_colour				red 147, green 147, blue 103
+secondary_colour				red 221, green 176, blue 69
 loading_logo					loading_screen/symbols/symbol128_papal_states.tga
 standard_index					3
 logo_index					FACTION_LOGO_PAPAL_STATES
@@ -590,8 +634,10 @@ culture						middle_eastern
 religion					pagan
 symbol						models_strat/symbol_mongols.CAS
 rebel_symbol					models_strat/symbol_rebels.CAS
-primary_colour					red 221, green 176, blue 69
-secondary_colour				red 164, green 125, blue 6
+;primary_colour					red 221, green 176, blue 69
+;secondary_colour				red 164, green 125, blue 6
+primary_colour					red 244, green 231, blue 170
+secondary_colour				red 0, green 0, blue 0
 loading_logo					loading_screen/symbols/symbol128_mongols.tga
 standard_index					8
 logo_index					FACTION_LOGO_MONGOLS
