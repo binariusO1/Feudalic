@@ -57418,25 +57418,9 @@ Trigger BattleCoward_Loss_Without_Fight
 
 ;------------------------------------------
 Trigger BattleCoward_Routed
- WhenToTest BattleGeneralRouted
+ WhenToTest BattleGeneralRouted  
 
- Condition IsGeneral
-	and Trait CounterOfBattles < 6			; to avoid a paradox of a coward experienced general; one may add more conditions here
-	and Trait GoodCommander < 2
-	and Trait Brave > 0	   
-
- Affects Coward 1 Chance 66
  Affects Coward 1 Chance 33
-
-;------------------------------------------
-Trigger BattleCoward_Routed_Teenager
- WhenToTest BattleGeneralRouted
-
- Condition IsGeneral
-	and Trait Wantschool > 0	 
-	and Trait Brave > 0
-	
- Affects Coward 1 Chance 66
 	   
 ;------------------------------------------
 Trigger Coward_Withdraw_Before_Battle_Even_Odds
