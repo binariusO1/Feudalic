@@ -89,7 +89,7 @@
 		<global_standing    modifier="1.5"/> - will modify the value depending on our standing 
         -->
         <item name="offer_cede_region">
-            <cost	            modifier="0.5"/>
+            <cost	            modifier="2.5"/>
 			<faction_standing   modifier="1.5"/>
 			<global_standing    modifier="1.5"/>
         </item>
