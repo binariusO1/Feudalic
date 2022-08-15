@@ -57420,7 +57420,8 @@ Trigger BattleCoward_Loss_Without_Fight
 Trigger BattleCoward_Routed
  WhenToTest BattleGeneralRouted  
 
- Affects Coward 1 Chance 33
+ Affects Coward  1  Chance  25 
+ Affects Haemophobic  1  Chance  5 
 	   
 ;------------------------------------------
 Trigger Coward_Withdraw_Before_Battle_Even_Odds
@@ -57434,7 +57435,6 @@ Trigger Coward_Withdraw_Before_Battle_Even_Odds
 	
  Affects Coward 1 Chance 33
 
- 
 ;--------------------------------------------------------- Brave and Coward - other reasons
 
 
