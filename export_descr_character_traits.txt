@@ -151,6 +151,8 @@
 ;==== WITCH traits --------------------------------------- JoC
 ;==== HERETIC traits ------------------------------------- JoC
 
+;========    FEATURES  =================================================== AGENTS
+;==== IMPROVE RELATIONS ------------------------------ Feudalic
 
 ;=================================================================================================================
 ;========    TRIGGERS start here   ===============================================================================
@@ -16827,7 +16829,18 @@ Trait AI_anti_heretic_boost
 
    Effect Piety 3
  
+;========    FEATURES  =================================================== AGENTS
+;==== IMPROVE RELATIONS ------------------------------ Feudalic
 
+;------------------------------------------
+Trait InForeignCountry
+Characters diplomat
+
+ Level In_Foreign_Country
+   Description In_Foreign_Country_desc
+   EffectsDescription In_Foreign_Country_effects_desc
+   GainMessage In_Foreign_Country_gain_desc
+   Threshold 1
 
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67120,5 +67133,30 @@ Trigger NonAggressor_Pisa
 ;
 ;    Affects HeirCandidate  -1  Chance  100 
 
+;========    FEATURES  =================================================== AGENTS
+;==== IMPROVE RELATIONS ------------------------------ Feudalic
+
+;----------------------------------------
+Trigger In_Foreign_Country_remove
+ WhenToTest CharacterTurnEnd
+
+ Condition CharacterIsLocal
+	   and AgentType = diplomat
+	   and RemainingMPPercentage < 95
+	   and Trait InForeignCountry > 0
+      		
+Affects InForeignCountry -1 Chance 100
+
+;------------------------------------------
+Trigger In_Foreign_Country_add
+ WhenToTest CharacterTurnEnd
+
+ Condition CharacterIsLocal
+	   and AgentType = diplomat
+	   and InEnemyLands
+	   and RemainingMPPercentage > 95
+	   and Trait InForeignCountry = 0
+
+Affects InForeignCountry 1 Chance 100
 
 ;====== END OF FILE ===========================================
