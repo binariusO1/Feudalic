@@ -281,8 +281,8 @@
 		<str_limit_weak float="0.5"/>
 		<str_limit_strong float="0.01"/>
 		<merchant_min_survival_acquire int="50"/>
-		<priest_religion_min float="0.6"/><!-- if religion < religion_min then region needs a priest -->
-		<priest_religion_max float="0.7"/><!-- if religion >= religion_max then a priest can be taken from this region for other missions -->
+		<priest_religion_min float="0.5"/><!-- if religion < religion_min then region needs a priest -->
+		<priest_religion_max float="0.8"/><!-- if religion >= religion_max then a priest can be taken from this region for other missions -->
 		<priest_heresey_min float="0.05"/><!-- if heresey >= heresey_min then region needs a priest -->
 		<priest_heresey_max float="0.2"/><!-- if heresey >= heresey_max then region needs a priest with highest priority -->
 		<priest_religion_export float="0.6"/><!-- if my religion in foreign region < religion_export then then we will export our religion in this region -->
