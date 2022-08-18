@@ -58,7 +58,7 @@
         </item>
         <item name="offer_ceasefire">
             <cost	            modifier="1.0"/>	<!-- The bigger the number the more human (or ai if wants peace) needs to pay -->
-			<faction_standing	modifier = "0.0"/>	<!-- was 0.0 seems it doesn't work?-->
+			<faction_standing	modifier = "1.0"/>	<!-- was 0.0 seems it doesn't work?-->
             <global_standing	modifier = "0.0"/>	<!-- was 0.0 seems it doesn't work?-->
         </item>
         <item name="offer_trade_rights">
