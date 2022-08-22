@@ -6658,7 +6658,7 @@ Trigger sphere_pisa
 	FactionStanding target_allies normalise -1.0 160
     FactionStanding target_faction normalise -1.0 8
     FactionStanding exclude_factions { slave } normalise -1.0 90
-;-------------------------------------------
+;------------------------------------------- 
 Trigger sphere_papal_states
 	WhenToTest GeneralCaptureSettlement
 	
@@ -6673,2703 +6673,2463 @@ Trigger sphere_papal_states
 ;-------------------------------------------
 
 ;##########         IMPROVE RELATIONS
-;------------------------------------------
-Trigger fs_improve_relations_with_venice1
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_1
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 1
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_1 = 1
 
     FactionStanding factions { venice } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily1
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { sicily } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { abbasid } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { denmark } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { egypt } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { scotland } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { cumans } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_turks1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { turks } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_france1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { france } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_hre1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { hre } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_england1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { england } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { portugal } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_poland1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { poland } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { byzantium } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_moors1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { moors } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_russia1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { russia } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_spain1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { spain } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { hungary } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { aragon } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { lithuania } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { kievan_rus } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { serbia } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { georgia } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_norway1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { norway } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { jerusalem } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { zengid } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_rum1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { rum } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { pisa } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { papal_states } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols1
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 1
-
-    FactionStanding factions { mongols } 0.001
-;------------------------------------------
-Trigger fs_improve_relations_with_venice2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 2
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_2 = 1
 
     FactionStanding factions { venice } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily2
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { sicily } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { abbasid } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { denmark } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { egypt } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { scotland } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { cumans } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_turks2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { turks } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_france2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { france } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_hre2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { hre } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_england2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { england } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { portugal } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_poland2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { poland } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { byzantium } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_moors2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { moors } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_russia2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { russia } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_spain2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { spain } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { hungary } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { aragon } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { lithuania } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { kievan_rus } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { serbia } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { georgia } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_norway2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { norway } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { jerusalem } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { zengid } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_rum2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { rum } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { pisa } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { papal_states } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols2
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 2
-
-    FactionStanding factions { mongols } 0.002
-;------------------------------------------
-Trigger fs_improve_relations_with_venice3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 3
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_3 = 1
 
     FactionStanding factions { venice } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily3
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { sicily } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { abbasid } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { denmark } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { egypt } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { scotland } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { cumans } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_turks3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { turks } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_france3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { france } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_hre3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { hre } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_england3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { england } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { portugal } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_poland3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { poland } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { byzantium } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_moors3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { moors } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_russia3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { russia } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_spain3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { spain } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { hungary } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { aragon } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { lithuania } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { kievan_rus } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { serbia } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { georgia } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_norway3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { norway } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { jerusalem } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { zengid } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_rum3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { rum } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { pisa } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { papal_states } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols3
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 3
-
-    FactionStanding factions { mongols } 0.003
-;------------------------------------------
-Trigger fs_improve_relations_with_venice4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 4
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_4 = 1
 
     FactionStanding factions { venice } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily4
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { sicily } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { abbasid } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { denmark } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { egypt } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { scotland } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { cumans } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_turks4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { turks } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_france4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { france } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_hre4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { hre } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_england4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { england } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { portugal } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_poland4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { poland } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { byzantium } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_moors4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { moors } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_russia4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { russia } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_spain4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { spain } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { hungary } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { aragon } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { lithuania } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { kievan_rus } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { serbia } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { georgia } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_norway4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { norway } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { jerusalem } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { zengid } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_rum4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { rum } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { pisa } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { papal_states } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols4
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 4
-
-    FactionStanding factions { mongols } 0.004
-;------------------------------------------
-Trigger fs_improve_relations_with_venice5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 5
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_5 = 1
 
     FactionStanding factions { venice } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily5
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { sicily } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { abbasid } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { denmark } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { egypt } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { scotland } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { cumans } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_turks5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { turks } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_france5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { france } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_hre5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { hre } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_england5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { england } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { portugal } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_poland5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { poland } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { byzantium } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_moors5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { moors } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_russia5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { russia } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_spain5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { spain } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { hungary } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { aragon } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { lithuania } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { kievan_rus } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { serbia } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { georgia } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_norway5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { norway } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { jerusalem } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { zengid } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_rum5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { rum } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { pisa } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { papal_states } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols5
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 5
-
-    FactionStanding factions { mongols } 0.005
-;------------------------------------------
-Trigger fs_improve_relations_with_venice6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 6
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_6 = 1
 
     FactionStanding factions { venice } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily6
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { sicily } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { abbasid } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { denmark } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { egypt } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { scotland } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { cumans } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_turks6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { turks } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_france6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { france } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_hre6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { hre } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_england6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { england } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { portugal } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_poland6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { poland } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { byzantium } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_moors6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { moors } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_russia6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { russia } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_spain6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { spain } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { hungary } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { aragon } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { lithuania } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { kievan_rus } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { serbia } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { georgia } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_norway6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { norway } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { jerusalem } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { zengid } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_rum6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { rum } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { pisa } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { papal_states } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols6
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 6
-
-    FactionStanding factions { mongols } 0.006
-;------------------------------------------
-Trigger fs_improve_relations_with_venice7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 7
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_7 = 1
 
     FactionStanding factions { venice } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily7
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { sicily } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { abbasid } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { denmark } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { egypt } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { scotland } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { cumans } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_turks7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { turks } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_france7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { france } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_hre7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { hre } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_england7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { england } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { portugal } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_poland7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { poland } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { byzantium } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_moors7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { moors } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_russia7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { russia } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_spain7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { spain } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { hungary } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { aragon } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { lithuania } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { kievan_rus } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { serbia } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { georgia } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_norway7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { norway } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { jerusalem } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { zengid } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_rum7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { rum } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { pisa } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { papal_states } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols7
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 7
-
-    FactionStanding factions { mongols } 0.007
-;------------------------------------------
-Trigger fs_improve_relations_with_venice8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 8
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_8 = 1
 
     FactionStanding factions { venice } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily8
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { sicily } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { abbasid } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { denmark } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { egypt } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { scotland } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { cumans } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_turks8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { turks } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_france8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { france } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_hre8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { hre } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_england8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { england } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { portugal } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_poland8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { poland } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { byzantium } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_moors8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { moors } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_russia8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { russia } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_spain8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { spain } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { hungary } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { aragon } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { lithuania } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { kievan_rus } 0.008
-;-------------------------------------------
-Trigger fs_improve_relations_with_serbia8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { serbia } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { georgia } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_norway8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { norway } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { jerusalem } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { zengid } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_rum8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { rum } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { pisa } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { papal_states } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols8
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 8
-
-    FactionStanding factions { mongols } 0.008
-;------------------------------------------
-Trigger fs_improve_relations_with_venice9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 9
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_9 = 1
 
     FactionStanding factions { venice } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily9
-    WhenToTest CharacterTurnStart
+;--------------------------------------------------
+Trigger fs_improve_relations_venice_2
+	WhenToTest FactionTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { sicily } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { abbasid } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { denmark } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { egypt } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { scotland } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { cumans } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_turks9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { turks } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_france9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { france } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_hre9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { hre } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_england9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { england } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { portugal } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_poland9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { poland } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { byzantium } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_moors9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { moors } 0.009
-;-----------------------------------------
-Trigger fs_improve_relations_with_russia9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { russia } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_spain9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { spain } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { hungary } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { aragon } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { lithuania } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { kievan_rus } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { serbia } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { georgia } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_norway9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { norway } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { jerusalem } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { zengid } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_rum9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { rum } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { pisa } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { papal_states } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols9
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 9
-
-    FactionStanding factions { mongols } 0.009
-;------------------------------------------
-Trigger fs_improve_relations_with_venice10
-    WhenToTest CharacterTurnStart
-
-    Condition AgentType = diplomat
-	and Trait InveniceFaction > 0
-	and Attribute Influence = 10
+    Condition FactionIsLocal
+    	and I_EventCounter venice_influence_10 = 1
 
     FactionStanding factions { venice } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_sicily10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InsicilyFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_1 = 1
+
+    FactionStanding factions { sicily } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_2 = 1
+
+    FactionStanding factions { sicily } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_3 = 1
+
+    FactionStanding factions { sicily } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_4 = 1
+
+    FactionStanding factions { sicily } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_5 = 1
+
+    FactionStanding factions { sicily } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_6 = 1
+
+    FactionStanding factions { sicily } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_7 = 1
+
+    FactionStanding factions { sicily } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_8 = 1
+
+    FactionStanding factions { sicily } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_9 = 1
+
+    FactionStanding factions { sicily } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_sicily_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter sicily_influence_10 = 1
 
     FactionStanding factions { sicily } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_abbasid10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InabbasidFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_1 = 1
+
+    FactionStanding factions { abbasid } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_2 = 1
+
+    FactionStanding factions { abbasid } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_3 = 1
+
+    FactionStanding factions { abbasid } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_4 = 1
+
+    FactionStanding factions { abbasid } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_5 = 1
+
+    FactionStanding factions { abbasid } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_6 = 1
+
+    FactionStanding factions { abbasid } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_7 = 1
+
+    FactionStanding factions { abbasid } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_8 = 1
+
+    FactionStanding factions { abbasid } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_9 = 1
+
+    FactionStanding factions { abbasid } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_abbasid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter abbasid_influence_10 = 1
 
     FactionStanding factions { abbasid } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_denmark10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait IndenmarkFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_1 = 1
+
+    FactionStanding factions { denmark } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_2 = 1
+
+    FactionStanding factions { denmark } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_3 = 1
+
+    FactionStanding factions { denmark } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_4 = 1
+
+    FactionStanding factions { denmark } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_5 = 1
+
+    FactionStanding factions { denmark } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_6 = 1
+
+    FactionStanding factions { denmark } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_7 = 1
+
+    FactionStanding factions { denmark } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_8 = 1
+
+    FactionStanding factions { denmark } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_9 = 1
+
+    FactionStanding factions { denmark } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_denmark_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter denmark_influence_10 = 1
 
     FactionStanding factions { denmark } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_egypt10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InegyptFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_1 = 1
+
+    FactionStanding factions { egypt } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_2 = 1
+
+    FactionStanding factions { egypt } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_3 = 1
+
+    FactionStanding factions { egypt } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_4 = 1
+
+    FactionStanding factions { egypt } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_5 = 1
+
+    FactionStanding factions { egypt } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_6 = 1
+
+    FactionStanding factions { egypt } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_7 = 1
+
+    FactionStanding factions { egypt } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_8 = 1
+
+    FactionStanding factions { egypt } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_9 = 1
+
+    FactionStanding factions { egypt } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_egypt_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter egypt_influence_10 = 1
 
     FactionStanding factions { egypt } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_scotland10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InscotlandFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_1 = 1
+
+    FactionStanding factions { scotland } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_2 = 1
+
+    FactionStanding factions { scotland } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_3 = 1
+
+    FactionStanding factions { scotland } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_4 = 1
+
+    FactionStanding factions { scotland } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_5 = 1
+
+    FactionStanding factions { scotland } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_6 = 1
+
+    FactionStanding factions { scotland } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_7 = 1
+
+    FactionStanding factions { scotland } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_8 = 1
+
+    FactionStanding factions { scotland } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_9 = 1
+
+    FactionStanding factions { scotland } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_scotland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter scotland_influence_10 = 1
 
     FactionStanding factions { scotland } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_cumans10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait IncumansFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_1 = 1
+
+    FactionStanding factions { cumans } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_2 = 1
+
+    FactionStanding factions { cumans } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_3 = 1
+
+    FactionStanding factions { cumans } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_4 = 1
+
+    FactionStanding factions { cumans } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_5 = 1
+
+    FactionStanding factions { cumans } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_6 = 1
+
+    FactionStanding factions { cumans } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_7 = 1
+
+    FactionStanding factions { cumans } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_8 = 1
+
+    FactionStanding factions { cumans } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_9 = 1
+
+    FactionStanding factions { cumans } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_cumans_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter cumans_influence_10 = 1
 
     FactionStanding factions { cumans } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_turks10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InturksFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_1 = 1
+
+    FactionStanding factions { turks } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_2 = 1
+
+    FactionStanding factions { turks } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_3 = 1
+
+    FactionStanding factions { turks } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_4 = 1
+
+    FactionStanding factions { turks } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_5 = 1
+
+    FactionStanding factions { turks } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_6 = 1
+
+    FactionStanding factions { turks } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_7 = 1
+
+    FactionStanding factions { turks } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_8 = 1
+
+    FactionStanding factions { turks } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_9 = 1
+
+    FactionStanding factions { turks } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_turks_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter turks_influence_10 = 1
 
     FactionStanding factions { turks } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_france10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InfranceFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_france_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_1 = 1
+
+    FactionStanding factions { france } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_2 = 1
+
+    FactionStanding factions { france } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_3 = 1
+
+    FactionStanding factions { france } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_4 = 1
+
+    FactionStanding factions { france } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_5 = 1
+
+    FactionStanding factions { france } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_6 = 1
+
+    FactionStanding factions { france } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_7 = 1
+
+    FactionStanding factions { france } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_8 = 1
+
+    FactionStanding factions { france } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_9 = 1
+
+    FactionStanding factions { france } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_france_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter france_influence_10 = 1
 
     FactionStanding factions { france } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_hre10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InhreFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_1 = 1
+
+    FactionStanding factions { hre } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_2 = 1
+
+    FactionStanding factions { hre } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_3 = 1
+
+    FactionStanding factions { hre } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_4 = 1
+
+    FactionStanding factions { hre } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_5 = 1
+
+    FactionStanding factions { hre } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_6 = 1
+
+    FactionStanding factions { hre } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_7 = 1
+
+    FactionStanding factions { hre } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_8 = 1
+
+    FactionStanding factions { hre } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_9 = 1
+
+    FactionStanding factions { hre } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_hre_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hre_influence_10 = 1
 
     FactionStanding factions { hre } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_england10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InenglandFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_england_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_1 = 1
+
+    FactionStanding factions { england } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_2 = 1
+
+    FactionStanding factions { england } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_3 = 1
+
+    FactionStanding factions { england } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_4 = 1
+
+    FactionStanding factions { england } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_5 = 1
+
+    FactionStanding factions { england } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_6 = 1
+
+    FactionStanding factions { england } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_7 = 1
+
+    FactionStanding factions { england } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_8 = 1
+
+    FactionStanding factions { england } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_9 = 1
+
+    FactionStanding factions { england } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_england_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter england_influence_10 = 1
 
     FactionStanding factions { england } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_portugal10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InportugalFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_1 = 1
+
+    FactionStanding factions { portugal } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_2 = 1
+
+    FactionStanding factions { portugal } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_3 = 1
+
+    FactionStanding factions { portugal } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_4 = 1
+
+    FactionStanding factions { portugal } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_5 = 1
+
+    FactionStanding factions { portugal } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_6 = 1
+
+    FactionStanding factions { portugal } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_7 = 1
+
+    FactionStanding factions { portugal } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_8 = 1
+
+    FactionStanding factions { portugal } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_9 = 1
+
+    FactionStanding factions { portugal } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_portugal_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter portugal_influence_10 = 1
 
     FactionStanding factions { portugal } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_poland10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InpolandFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_1 = 1
+
+    FactionStanding factions { poland } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_2 = 1
+
+    FactionStanding factions { poland } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_3 = 1
+
+    FactionStanding factions { poland } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_4 = 1
+
+    FactionStanding factions { poland } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_5 = 1
+
+    FactionStanding factions { poland } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_6 = 1
+
+    FactionStanding factions { poland } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_7 = 1
+
+    FactionStanding factions { poland } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_8 = 1
+
+    FactionStanding factions { poland } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_9 = 1
+
+    FactionStanding factions { poland } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_poland_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter poland_influence_10 = 1
 
     FactionStanding factions { poland } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_byzantium10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InbyzantiumFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_1 = 1
+
+    FactionStanding factions { byzantium } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_2 = 1
+
+    FactionStanding factions { byzantium } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_3 = 1
+
+    FactionStanding factions { byzantium } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_4 = 1
+
+    FactionStanding factions { byzantium } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_5 = 1
+
+    FactionStanding factions { byzantium } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_6 = 1
+
+    FactionStanding factions { byzantium } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_7 = 1
+
+    FactionStanding factions { byzantium } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_8 = 1
+
+    FactionStanding factions { byzantium } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_9 = 1
+
+    FactionStanding factions { byzantium } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_byzantium_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter byzantium_influence_10 = 1
 
     FactionStanding factions { byzantium } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_moors10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InmoorsFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_1 = 1
+
+    FactionStanding factions { moors } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_2 = 1
+
+    FactionStanding factions { moors } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_3 = 1
+
+    FactionStanding factions { moors } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_4 = 1
+
+    FactionStanding factions { moors } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_5 = 1
+
+    FactionStanding factions { moors } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_6 = 1
+
+    FactionStanding factions { moors } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_7 = 1
+
+    FactionStanding factions { moors } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_8 = 1
+
+    FactionStanding factions { moors } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_9 = 1
+
+    FactionStanding factions { moors } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_moors_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter moors_influence_10 = 1
 
     FactionStanding factions { moors } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_russia10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InrussiaFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_1 = 1
+
+    FactionStanding factions { russia } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_2 = 1
+
+    FactionStanding factions { russia } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_3 = 1
+
+    FactionStanding factions { russia } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_4 = 1
+
+    FactionStanding factions { russia } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_5 = 1
+
+    FactionStanding factions { russia } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_6 = 1
+
+    FactionStanding factions { russia } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_7 = 1
+
+    FactionStanding factions { russia } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_8 = 1
+
+    FactionStanding factions { russia } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_9 = 1
+
+    FactionStanding factions { russia } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_russia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter russia_influence_10 = 1
 
     FactionStanding factions { russia } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_spain10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InspainFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_1 = 1
+
+    FactionStanding factions { spain } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_2 = 1
+
+    FactionStanding factions { spain } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_3 = 1
+
+    FactionStanding factions { spain } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_4 = 1
+
+    FactionStanding factions { spain } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_5 = 1
+
+    FactionStanding factions { spain } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_6 = 1
+
+    FactionStanding factions { spain } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_7 = 1
+
+    FactionStanding factions { spain } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_8 = 1
+
+    FactionStanding factions { spain } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_9 = 1
+
+    FactionStanding factions { spain } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_spain_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter spain_influence_10 = 1
 
     FactionStanding factions { spain } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_hungary10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InhungaryFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_1 = 1
+
+    FactionStanding factions { hungary } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_2 = 1
+
+    FactionStanding factions { hungary } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_3 = 1
+
+    FactionStanding factions { hungary } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_4 = 1
+
+    FactionStanding factions { hungary } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_5 = 1
+
+    FactionStanding factions { hungary } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_6 = 1
+
+    FactionStanding factions { hungary } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_7 = 1
+
+    FactionStanding factions { hungary } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_8 = 1
+
+    FactionStanding factions { hungary } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_9 = 1
+
+    FactionStanding factions { hungary } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_hungary_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter hungary_influence_10 = 1
 
     FactionStanding factions { hungary } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_aragon10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InaragonFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_1 = 1
+
+    FactionStanding factions { aragon } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_2 = 1
+
+    FactionStanding factions { aragon } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_3 = 1
+
+    FactionStanding factions { aragon } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_4 = 1
+
+    FactionStanding factions { aragon } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_5 = 1
+
+    FactionStanding factions { aragon } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_6 = 1
+
+    FactionStanding factions { aragon } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_7 = 1
+
+    FactionStanding factions { aragon } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_8 = 1
+
+    FactionStanding factions { aragon } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_9 = 1
+
+    FactionStanding factions { aragon } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_aragon_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter aragon_influence_10 = 1
 
     FactionStanding factions { aragon } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_lithuania10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InlithuaniaFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_1 = 1
+
+    FactionStanding factions { lithuania } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_2 = 1
+
+    FactionStanding factions { lithuania } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_3 = 1
+
+    FactionStanding factions { lithuania } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_4 = 1
+
+    FactionStanding factions { lithuania } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_5 = 1
+
+    FactionStanding factions { lithuania } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_6 = 1
+
+    FactionStanding factions { lithuania } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_7 = 1
+
+    FactionStanding factions { lithuania } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_8 = 1
+
+    FactionStanding factions { lithuania } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_9 = 1
+
+    FactionStanding factions { lithuania } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_lithuania_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter lithuania_influence_10 = 1
 
     FactionStanding factions { lithuania } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_kievan_rus10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait Inkievan_rusFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_1 = 1
+
+    FactionStanding factions { kievan_rus } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_2 = 1
+
+    FactionStanding factions { kievan_rus } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_3 = 1
+
+    FactionStanding factions { kievan_rus } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_4 = 1
+
+    FactionStanding factions { kievan_rus } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_5 = 1
+
+    FactionStanding factions { kievan_rus } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_6 = 1
+
+    FactionStanding factions { kievan_rus } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_7 = 1
+
+    FactionStanding factions { kievan_rus } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_8 = 1
+
+    FactionStanding factions { kievan_rus } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_9 = 1
+
+    FactionStanding factions { kievan_rus } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_kievan_rus_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter kievan_rus_influence_10 = 1
 
     FactionStanding factions { kievan_rus } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_serbia10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InserbiaFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_1 = 1
+
+    FactionStanding factions { serbia } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_2 = 1
+
+    FactionStanding factions { serbia } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_3 = 1
+
+    FactionStanding factions { serbia } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_4 = 1
+
+    FactionStanding factions { serbia } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_5 = 1
+
+    FactionStanding factions { serbia } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_6 = 1
+
+    FactionStanding factions { serbia } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_7 = 1
+
+    FactionStanding factions { serbia } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_8 = 1
+
+    FactionStanding factions { serbia } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_9 = 1
+
+    FactionStanding factions { serbia } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_serbia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter serbia_influence_10 = 1
 
     FactionStanding factions { serbia } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_georgia10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait IngeorgiaFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_1 = 1
+
+    FactionStanding factions { georgia } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_2 = 1
+
+    FactionStanding factions { georgia } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_3 = 1
+
+    FactionStanding factions { georgia } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_4 = 1
+
+    FactionStanding factions { georgia } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_5 = 1
+
+    FactionStanding factions { georgia } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_6 = 1
+
+    FactionStanding factions { georgia } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_7 = 1
+
+    FactionStanding factions { georgia } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_8 = 1
+
+    FactionStanding factions { georgia } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_9 = 1
+
+    FactionStanding factions { georgia } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_georgia_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter georgia_influence_10 = 1
 
     FactionStanding factions { georgia } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_norway10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InnorwayFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_1 = 1
+
+    FactionStanding factions { norway } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_2 = 1
+
+    FactionStanding factions { norway } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_3 = 1
+
+    FactionStanding factions { norway } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_4 = 1
+
+    FactionStanding factions { norway } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_5 = 1
+
+    FactionStanding factions { norway } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_6 = 1
+
+    FactionStanding factions { norway } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_7 = 1
+
+    FactionStanding factions { norway } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_8 = 1
+
+    FactionStanding factions { norway } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_9 = 1
+
+    FactionStanding factions { norway } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_norway_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter norway_influence_10 = 1
 
     FactionStanding factions { norway } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_jerusalem10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InjerusalemFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_1 = 1
+
+    FactionStanding factions { jerusalem } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_2 = 1
+
+    FactionStanding factions { jerusalem } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_3 = 1
+
+    FactionStanding factions { jerusalem } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_4 = 1
+
+    FactionStanding factions { jerusalem } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_5 = 1
+
+    FactionStanding factions { jerusalem } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_6 = 1
+
+    FactionStanding factions { jerusalem } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_7 = 1
+
+    FactionStanding factions { jerusalem } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_8 = 1
+
+    FactionStanding factions { jerusalem } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_9 = 1
+
+    FactionStanding factions { jerusalem } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_jerusalem_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter jerusalem_influence_10 = 1
 
     FactionStanding factions { jerusalem } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_zengid10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InzengidFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_1 = 1
+
+    FactionStanding factions { zengid } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_2 = 1
+
+    FactionStanding factions { zengid } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_3 = 1
+
+    FactionStanding factions { zengid } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_4 = 1
+
+    FactionStanding factions { zengid } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_5 = 1
+
+    FactionStanding factions { zengid } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_6 = 1
+
+    FactionStanding factions { zengid } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_7 = 1
+
+    FactionStanding factions { zengid } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_8 = 1
+
+    FactionStanding factions { zengid } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_9 = 1
+
+    FactionStanding factions { zengid } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_zengid_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter zengid_influence_10 = 1
 
     FactionStanding factions { zengid } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_rum10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InrumFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_1 = 1
+
+    FactionStanding factions { rum } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_2 = 1
+
+    FactionStanding factions { rum } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_3 = 1
+
+    FactionStanding factions { rum } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_4 = 1
+
+    FactionStanding factions { rum } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_5 = 1
+
+    FactionStanding factions { rum } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_6 = 1
+
+    FactionStanding factions { rum } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_7 = 1
+
+    FactionStanding factions { rum } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_8 = 1
+
+    FactionStanding factions { rum } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_9 = 1
+
+    FactionStanding factions { rum } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_rum_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter rum_influence_10 = 1
 
     FactionStanding factions { rum } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_pisa10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InpisaFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_1 = 1
+
+    FactionStanding factions { pisa } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_2 = 1
+
+    FactionStanding factions { pisa } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_3 = 1
+
+    FactionStanding factions { pisa } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_4 = 1
+
+    FactionStanding factions { pisa } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_5 = 1
+
+    FactionStanding factions { pisa } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_6 = 1
+
+    FactionStanding factions { pisa } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_7 = 1
+
+    FactionStanding factions { pisa } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_8 = 1
+
+    FactionStanding factions { pisa } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_9 = 1
+
+    FactionStanding factions { pisa } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_pisa_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter pisa_influence_10 = 1
 
     FactionStanding factions { pisa } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_papal_states10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait Inpapal_statesFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_1 = 1
+
+    FactionStanding factions { papal_states } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_2 = 1
+
+    FactionStanding factions { papal_states } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_3 = 1
+
+    FactionStanding factions { papal_states } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_4 = 1
+
+    FactionStanding factions { papal_states } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_5 = 1
+
+    FactionStanding factions { papal_states } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_6 = 1
+
+    FactionStanding factions { papal_states } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_7 = 1
+
+    FactionStanding factions { papal_states } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_8 = 1
+
+    FactionStanding factions { papal_states } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_9 = 1
+
+    FactionStanding factions { papal_states } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_papal_states_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter papal_states_influence_10 = 1
 
     FactionStanding factions { papal_states } 0.01
-;------------------------------------------
-Trigger fs_improve_relations_with_mongols10
-    WhenToTest CharacterTurnStart
 
-    Condition AgentType = diplomat
-	and Trait InmongolsFaction > 0
-	and Attribute Influence = 10
+
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_1
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_1 = 1
+
+    FactionStanding factions { mongols } 0.001
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_2 = 1
+
+    FactionStanding factions { mongols } 0.002
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_3 = 1
+
+    FactionStanding factions { mongols } 0.003
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_4 = 1
+
+    FactionStanding factions { mongols } 0.004
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_5 = 1
+
+    FactionStanding factions { mongols } 0.005
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_6 = 1
+
+    FactionStanding factions { mongols } 0.006
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_7 = 1
+
+    FactionStanding factions { mongols } 0.007
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_8 = 1
+
+    FactionStanding factions { mongols } 0.008
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_9 = 1
+
+    FactionStanding factions { mongols } 0.009
+;--------------------------------------------------
+Trigger fs_improve_relations_mongols_2
+	WhenToTest FactionTurnStart
+
+    Condition FactionIsLocal
+    	and I_EventCounter mongols_influence_10 = 1
 
     FactionStanding factions { mongols } 0.01
+
+
